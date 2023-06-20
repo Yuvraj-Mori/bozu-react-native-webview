@@ -75,10 +75,10 @@ class RNCWebViewManagerImpl {
         settings.displayZoomControls = false
         settings.domStorageEnabled = true
         settings.setSupportMultipleWindows(true)
-        settings.allowFileAccess = false
-        settings.allowContentAccess = false
-        settings.allowFileAccessFromFileURLs = false
-        setAllowUniversalAccessFromFileURLs(webView, false)
+        settings.allowFileAccess = true
+        settings.allowContentAccess = true
+        settings.allowFileAccessFromFileURLs = true
+        setAllowUniversalAccessFromFileURLs(webView, true)
         setMixedContentMode(webView, "never")
 
         // Fixes broken full-screen modals/galleries due to body height being 0.
